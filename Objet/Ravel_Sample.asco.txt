@@ -1,0 +1,159 @@
+; This is a sample score for AnteScofo - Anticipatory Score Following
+;	This is Ravel's habanera opening!
+
+BPM 60	
+	; Initialize Antescofo - These variables are automatically set upon "start"
+	;	These values might change within different performances
+	 antescofo-mess gamma -1.0, tune 444.0, pedal 0, suivi 1, nofharm 10 @local 
+	; The above also shows combinations of several messages as in Max/Pd message box
+;;; ASCOGRAPH STUFF
+;--------- connection OSC to AscoGraph
+oscsend osc_speed1 :6789 "/antescofo/accomp_speed"
+oscsend osc_begin1 :6789 "/antescofo/accomp_pos"
+
+print (@bach_score())
+
+NOTE 70 0.125 	Measure1
+NOTE 72 0.125
+NOTE 70 1.0	
+NOTE 70 0.125
+NOTE 72 0.125
+NOTE 70 1.625	
+NOTE 69 0.125
+NOTE 67 0.125
+NOTE 65 0.125
+NOTE 63 0.125
+NOTE 65 0.125
+NOTE 67 0.125
+NOTE 69 0.125
+NOTE 70 0.125	Measure2
+NOTE 72 0.125
+NOTE 70 1.25	
+NOTE 69 0.167
+NOTE 70 0.166
+NOTE 69 0.167
+NOTE 67 0.167	Measure3
+NOTE 69 0.166
+NOTE 67 0.167
+NOTE 65 0.167
+NOTE 67 0.166
+NOTE 65 0.167
+NOTE 63 0.167
+NOTE 65 0.166
+NOTE 63 0.167
+NOTE 61 0.167
+NOTE 63 0.166
+NOTE 61 0.167
+NOTE 58 0.333	Measure5
+NOTE 60 0.334 
+NOTE 61 0.333
+NOTE 65 0.5
+NOTE 63 0.5		
+NOTE 58 0.333	Measure6
+NOTE 60 0.334
+NOTE 61 0.333
+NOTE 65 0.5
+NOTE 63 0.5  
+NOTE 65 0  	 		; Grace notes take 0 duration (atemporal)
+NOTE 63 0	
+NOTE 55	2.0		Measure7
+NOTE 0 2.0		Measure7_sil
+NOTE 72 0.33 		Measure9
+NOTE 72 0.33
+NOTE 72 0.34
+NOTE 72 0.5
+NOTE 70 0.5
+
+NOTE 74 0.25		Measure10
+NOTE 72 2.25
+NOTE 70 0.125	Measure11
+NOTE 72 0.125
+NOTE 74 0.125
+NOTE 72 0.125
+NOTE 70 0.5
+NOTE 68 0.5
+NOTE 70 0.125	Measure12
+NOTE 68 0.125
+NOTE 67 1.75
+NOTE 65 0.333	Measure13
+NOTE 67 0.334
+NOTE 68 0.333
+NOTE 72 0.5
+NOTE 70 0.5
+NOTE 63 0.333	Measure14
+NOTE 65 0.334
+NOTE 67 0.333
+NOTE 70 0.5
+NOTE 68 0.5
+NOTE 60 0.333	Measure15
+NOTE 62 0.334
+NOTE 63 0.333	
+NOTE 67 0.5
+TEMPO OFF			; to model FERMATA
+NOTE 65 0.5
+NOTE 62 0 			; This is another gracenot
+NOTE 65 0 
+NOTE 67 2.0		Measure16
+NOTE 0 0.5
+TEMPO ON			; End of Fermata
+TRILL ( 6700 6800 ) 2.5	Trill1
+NOTE 65 0.125
+NOTE 67 0.125
+NOTE 68 0.125
+NOTE 70 0.125
+NOTE 72 0.118	Measure19
+NOTE 70 0.117
+NOTE 68 0.118
+NOTE 67 0.117
+NOTE 65 0.118
+NOTE 63 0.117
+NOTE 61 0.118
+NOTE 60 0.118
+NOTE 58 0.118
+NOTE 56 0.117
+NOTE 55 0.118
+NOTE 56 0.117
+NOTE 58 0.118
+NOTE 60 0.117
+NOTE 61 0.118
+NOTE 63 0.118
+NOTE 65 0.118
+NOTE 67 1.0		Measure20
+NOTE 0 0.5
+TRILL ( 6700 6900 ) 2.5	Trill2
+NOTE 65 0.125
+NOTE 67 0.125
+NOTE 69 0.125
+NOTE 70 0.125
+NOTE 72 2.333	Measure23
+NOTE 74 0.334	Measure24
+NOTE 71 0.333
+NOTE 72 0.5
+NOTE 68 0.5
+NOTE 70 0.333
+NOTE 67 0.334
+NOTE 68 0.333
+NOTE 65 0.5
+NOTE 67 0.5
+NOTE 63 0.333
+NOTE 65 0.334
+NOTE 62 0.333
+NOTE 63 0.333
+NOTE 60 0.334
+NOTE 62 0.333
+NOTE 59 2.0		Measure25
+NOTE 0 0.5
+NOTE 59 0.5		Measure26
+NOTE 60 0.5
+NOTE 62 0.125
+NOTE 60 0.125
+NOTE 59 0.125
+NOTE 60 0.125
+NOTE 65 1.5		Measure27
+NOTE 63 0.5
+NOTE 63 0.083	Measure28
+NOTE 65 0.084
+NOTE 63 0.083
+NOTE 60 1.75		The_End
+
+
